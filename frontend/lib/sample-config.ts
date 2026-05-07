@@ -1,0 +1,31 @@
+import { AppConfig } from "./types";
+
+export const sampleConfig: AppConfig = {
+  name: "Campus Event CRM",
+  description: "A generated CRM for managing college event leads and follow-ups.",
+  theme: {
+    primary: "#1f6feb",
+    accent: "#0f766e"
+  },
+  entity: {
+    name: "Lead",
+    plural: "Leads",
+    fields: [
+      { key: "studentName", label: "Student Name", type: "text", required: true },
+      { key: "email", label: "Email", type: "email", required: true },
+      { key: "college", label: "College", type: "text", required: true },
+      {
+        key: "stage",
+        label: "Stage",
+        type: "select",
+        required: true,
+        options: ["New", "Contacted", "Registered", "Attended"]
+      },
+      { key: "notes", label: "Notes", type: "textarea" }
+    ]
+  },
+  notifications: [
+    { event: "record.created", message: "A new lead was added to the generated app." },
+    { event: "csv.imported", message: "CSV import completed for the generated app." }
+  ]
+};
