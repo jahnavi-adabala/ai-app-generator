@@ -4,7 +4,7 @@
       "entrypoint": "frontend",
       "routePrefix": "/",
       "framework": "nextjs",
-      "outputDirectory": ".next"
+
     }
   }
 }
