@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Config-driven backend for the AI App Generator demo task",
   "main": "dist/index.js",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "postinstall": "prisma generate",
     "dev": "ts-node src/index.ts",
